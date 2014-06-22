@@ -1,0 +1,107 @@
+//variables
+$mainfont: Arial;
+$lightgray: #C0C0C0;
+$gray: #787878;
+
+.container {
+  width: 965px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.left {
+  max-width: 250px;
+  float: left;
+  h2 {
+    font-family: $mainfont;
+    font-size: 18px;
+  }
+}
+
+.right {
+  width: 700px;
+  float: right;
+  border: solid $gray 1px;
+  border-radius: 5px;
+  height: 350px;
+}
+
+
+.name
+  img {
+    width: 225px;
+    border-radius: 8px;
+  }
+  h1 {
+    font-family: $mainfont;
+    font-size: 25px;
+    margin: 0px;
+  }
+  p {
+    font-family: arial;
+    color: $gray;
+    font-size: 20px;
+    margin: 0px;
+  }
+
+.info {
+  padding: 20px 0px;
+  border-top: solid $lightgray 1px;
+  border-bottom: solid $lightgray 1px;
+  margin: 20px 0px;
+
+  i {
+    color: $lightgray;
+    padding-right: 5px;
+    font-size: 16px;
+    margin-right: 5px;
+  }
+
+  li {
+    list-style: none;
+    padding: 5px;
+    font-family: $mainfont;
+    font-size: 14px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.tracker {
+  border-bottom: solid $lightgray 1px;
+  padding-bottom: 15px;
+  li {
+    list-style: none;
+    display: table;
+  }
+}
+
+.numbers {
+  a {
+    font-family: $mainfont;
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+    margin: auto;
+    text-decoration: none;
+    padding: 0px 30px;
+  }
+  a:hover {
+    color: blue;
+  }
+}
+
+.titles {
+  a {
+    font-family: $mainfont;
+    font-size: 12px;
+    color: $lightgray;
+    margin: auto;
+    text-decoration: none;
+    padding: 0px 12px;
+  }
+  a:hover {
+    color: blue;
+  }
+}

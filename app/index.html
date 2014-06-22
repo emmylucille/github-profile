@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>github repo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <aside class="left"></aside>
+      <section class="right"></section>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <script type="text/template" id="profile">
+      <div class="name">
+        <img src="<%= avatar_url %>">
+        <h1><%= name %></h1>
+        <p><%= login %></p>
+      </div>
+
+      <div class="info">
+        <li><i class="fa fa-map-marker"></i><%= location %></li>
+        <li><a href= "#"><i class="fa fa-envelope-o"></i><%= email %></a></li>
+        <li><i class="fa fa-clock-o"></i>Joined on <%= created_at %></li>
+      </div>
+
+      <section class= "tracker">
+        <div class= "numbers">
+          <a href= "#"><%= followers %></a>
+          <a href= "#"><%= public_gists %></a>
+          <a href= "#"><%= following %></a>
+        </div>
+        <div class= "titles">
+          <a href= "#">Followers</a>
+          <a href= "#">Starred</a>
+          <a href= "#">Following</a>
+        </div>
+      </section>
+
+      <h2>Organizations</h2>
+    </script>
+
+    <script>
+      profileTpl = $("#profile").html();
+
+      $(".left").append(_.template (profileTpl, user));
+    </script>
+
+
+  </body>
+</html>
+
+<!-- // $(".left").append('<img src = "' + user.avatar_url + '">'); -->

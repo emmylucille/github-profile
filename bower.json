@@ -1,0 +1,11 @@
+{
+  "name": "github-repo-makeitwork",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.0"
+  },
+  "devDependencies": {
+    "underscore": "~1.6.0"
+  }
+}
