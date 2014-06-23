@@ -10,7 +10,7 @@ $gray: #787878;
 }
 
 .left {
-  max-width: 250px;
+  max-width: 225px;
   float: left;
   h2 {
     font-family: $mainfont;
@@ -35,7 +35,9 @@ $gray: #787878;
   h1 {
     font-family: $mainfont;
     font-size: 25px;
+    font-weight: light;
     margin: 0px;
+    margin-top: 10px;
   }
   p {
     font-family: arial;
@@ -59,7 +61,7 @@ $gray: #787878;
 
   li {
     list-style: none;
-    padding: 5px;
+    padding: 5px 5px 5px 0px;
     font-family: $mainfont;
     font-size: 14px;
   }
@@ -80,12 +82,12 @@ $gray: #787878;
 .numbers {
   a {
     font-family: $mainfont;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
     color: black;
     margin: auto;
     text-decoration: none;
-    padding: 0px 30px;
+    padding: 0px 27px;
   }
   a:hover {
     color: blue;
@@ -93,6 +95,7 @@ $gray: #787878;
 }
 
 .titles {
+  margin-top: -5px;
   a {
     font-family: $mainfont;
     font-size: 12px;
