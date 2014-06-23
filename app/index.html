@@ -56,18 +56,19 @@
     <script>
 
       //code for user
-      profileTpl = $("#profile").html();
+      var profileTpl = $("#profile").html();
 
       $(".left").append(_.template (profileTpl, user));
 
       //code for repos
-      reposTpl = $("#projects").html();
+      var reposTpl = $("#projects").html();
 
-      var gotit = repos.forEach(function(info){
-        return(info);
-       });
+      // var yay = repos.forEach(function(idx){
+      //   console(idx);
+      //  });
 
-       $(".right").append(_.template (reposTpl, gotit));
+
+       $(".right").append(_.template (reposTpl, repos));
 
     </script>
 
