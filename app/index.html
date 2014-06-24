@@ -33,7 +33,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <script src="bower_components/underscore/underscore.js"></script>
-    <script src = "apiToken.js"></script>
+    <script src = "scripts/apiToken.js"></script>
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
@@ -76,14 +76,10 @@
 
       //code for user
       var profileTpl = $("#profile").html();
-      var userAPI = "http://github.com/users/emmylucille/repos?client_id="token"";
+      var userAPI = "https://api.github.com/users/emmylucille?client_id=token";
 
-      // $.getJSON("userAPI"), function(userData){
-      //   $("#profile").html(_.template(profileTpl,{users:userData}));
-      // });
-
-      $.getJSON("userAPI").done(function(userData){
-        $("#profile").html(_.template(profileTpl,{users:userData}));
+      $.getJSON(userAPI).done(function(userData){
+        $(".left").append(_.template(profileTpl,userData));
       });
 
       // $(".left").append(_.template (profileTpl, user));

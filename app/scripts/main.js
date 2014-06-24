@@ -1,4 +1,4 @@
-$get.JSON("http://github.com/users/emmylucille/repos?client_id="token"")
+$get.JSON("https://api.github.com/users/emmylucille?client_id=token");
 
 // var user =
 // {
