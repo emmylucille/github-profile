@@ -5,9 +5,20 @@
     <title>github repo</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
   </head>
   <body>
 
@@ -16,9 +27,17 @@
       <section class="right"></section>
     </div>
 
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src = "apiToken.js"></script>
+
+    <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <!-- endbuild -->
 
     <script type="text/template" id="profile">
       <div class="name">
@@ -50,15 +69,24 @@
     </script>
 
     <script type="text/template" id="projects">
-      <h1><%= name[0] %></h1>
+      <h1><%= name %></h1>
     </script>
 
     <script>
 
       //code for user
       var profileTpl = $("#profile").html();
+      var userAPI = "http://github.com/users/emmylucille/repos?client_id="token"";
 
-      $(".left").append(_.template (profileTpl, user));
+      // $.getJSON("userAPI"), function(userData){
+      //   $("#profile").html(_.template(profileTpl,{users:userData}));
+      // });
+
+      $.getJSON("userAPI").done(function(userData){
+        $("#profile").html(_.template(profileTpl,{users:userData}));
+      });
+
+      // $(".left").append(_.template (profileTpl, user));
 
       //code for repos
       var reposTpl = $("#projects").html();
